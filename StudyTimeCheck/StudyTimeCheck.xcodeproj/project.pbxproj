@@ -11,7 +11,40 @@
 		61BDB9872CF5D27B00249AC8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BDB9862CF5D27B00249AC8 /* ContentView.swift */; };
 		61BDB9892CF5D28000249AC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61BDB9882CF5D28000249AC8 /* Assets.xcassets */; };
 		61BDB98C2CF5D28000249AC8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61BDB98B2CF5D28000249AC8 /* Preview Assets.xcassets */; };
+		61BDB99A2CF5E58D00249AC8 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61BDB9992CF5E58D00249AC8 /* WidgetKit.framework */; };
+		61BDB99C2CF5E58D00249AC8 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61BDB99B2CF5E58D00249AC8 /* SwiftUI.framework */; };
+		61BDB99F2CF5E58D00249AC8 /* StudyTimeCheckWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BDB99E2CF5E58D00249AC8 /* StudyTimeCheckWidgetBundle.swift */; };
+		61BDB9A12CF5E58D00249AC8 /* StudyTimeCheckWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BDB9A02CF5E58D00249AC8 /* StudyTimeCheckWidgetLiveActivity.swift */; };
+		61BDB9A72CF5E59000249AC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61BDB9A62CF5E59000249AC8 /* Assets.xcassets */; };
+		61BDB9AB2CF5E59000249AC8 /* StudyTimeCheckWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 61BDB9972CF5E58D00249AC8 /* StudyTimeCheckWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		61BDB9B02CF5E64A00249AC8 /* StudyTimeCheckWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BDB9A02CF5E58D00249AC8 /* StudyTimeCheckWidgetLiveActivity.swift */; };
+		61BDB9B22CF5E75700249AC8 /* LiveActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BDB9B12CF5E75700249AC8 /* LiveActivityManager.swift */; };
+		61BDB9B42CF6222B00249AC8 /* LiveActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BDB9B12CF5E75700249AC8 /* LiveActivityManager.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		61BDB9A92CF5E59000249AC8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 61BDB9792CF5D27B00249AC8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 61BDB9962CF5E58D00249AC8;
+			remoteInfo = StudyTimeCheckWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		61BDB9AF2CF5E59000249AC8 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				61BDB9AB2CF5E59000249AC8 /* StudyTimeCheckWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		61BDB9812CF5D27B00249AC8 /* StudyTimeCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyTimeCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,6 +52,15 @@
 		61BDB9862CF5D27B00249AC8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		61BDB9882CF5D28000249AC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61BDB98B2CF5D28000249AC8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		61BDB9922CF5E48400249AC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		61BDB9972CF5E58D00249AC8 /* StudyTimeCheckWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = StudyTimeCheckWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		61BDB9992CF5E58D00249AC8 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		61BDB99B2CF5E58D00249AC8 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		61BDB99E2CF5E58D00249AC8 /* StudyTimeCheckWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyTimeCheckWidgetBundle.swift; sourceTree = "<group>"; };
+		61BDB9A02CF5E58D00249AC8 /* StudyTimeCheckWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyTimeCheckWidgetLiveActivity.swift; sourceTree = "<group>"; };
+		61BDB9A62CF5E59000249AC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		61BDB9A82CF5E59000249AC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61BDB9B12CF5E75700249AC8 /* LiveActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +71,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		61BDB9942CF5E58D00249AC8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61BDB99C2CF5E58D00249AC8 /* SwiftUI.framework in Frameworks */,
+				61BDB99A2CF5E58D00249AC8 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -36,6 +87,8 @@
 			isa = PBXGroup;
 			children = (
 				61BDB9832CF5D27B00249AC8 /* StudyTimeCheck */,
+				61BDB99D2CF5E58D00249AC8 /* StudyTimeCheckWidget */,
+				61BDB9982CF5E58D00249AC8 /* Frameworks */,
 				61BDB9822CF5D27B00249AC8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				61BDB9812CF5D27B00249AC8 /* StudyTimeCheck.app */,
+				61BDB9972CF5E58D00249AC8 /* StudyTimeCheckWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -51,6 +105,7 @@
 		61BDB9832CF5D27B00249AC8 /* StudyTimeCheck */ = {
 			isa = PBXGroup;
 			children = (
+				61BDB9922CF5E48400249AC8 /* Info.plist */,
 				61BDB9842CF5D27B00249AC8 /* StudyTimeCheckApp.swift */,
 				61BDB9862CF5D27B00249AC8 /* ContentView.swift */,
 				61BDB9882CF5D28000249AC8 /* Assets.xcassets */,
@@ -67,6 +122,27 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		61BDB9982CF5E58D00249AC8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				61BDB9992CF5E58D00249AC8 /* WidgetKit.framework */,
+				61BDB99B2CF5E58D00249AC8 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		61BDB99D2CF5E58D00249AC8 /* StudyTimeCheckWidget */ = {
+			isa = PBXGroup;
+			children = (
+				61BDB99E2CF5E58D00249AC8 /* StudyTimeCheckWidgetBundle.swift */,
+				61BDB9A02CF5E58D00249AC8 /* StudyTimeCheckWidgetLiveActivity.swift */,
+				61BDB9B12CF5E75700249AC8 /* LiveActivityManager.swift */,
+				61BDB9A62CF5E59000249AC8 /* Assets.xcassets */,
+				61BDB9A82CF5E59000249AC8 /* Info.plist */,
+			);
+			path = StudyTimeCheckWidget;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,15 +153,34 @@
 				61BDB97D2CF5D27B00249AC8 /* Sources */,
 				61BDB97E2CF5D27B00249AC8 /* Frameworks */,
 				61BDB97F2CF5D27B00249AC8 /* Resources */,
+				61BDB9AF2CF5E59000249AC8 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				61BDB9AA2CF5E59000249AC8 /* PBXTargetDependency */,
 			);
 			name = StudyTimeCheck;
 			productName = StudyTimeCheck;
 			productReference = 61BDB9812CF5D27B00249AC8 /* StudyTimeCheck.app */;
 			productType = "com.apple.product-type.application";
+		};
+		61BDB9962CF5E58D00249AC8 /* StudyTimeCheckWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 61BDB9AC2CF5E59000249AC8 /* Build configuration list for PBXNativeTarget "StudyTimeCheckWidgetExtension" */;
+			buildPhases = (
+				61BDB9932CF5E58D00249AC8 /* Sources */,
+				61BDB9942CF5E58D00249AC8 /* Frameworks */,
+				61BDB9952CF5E58D00249AC8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StudyTimeCheckWidgetExtension;
+			productName = StudyTimeCheckWidgetExtension;
+			productReference = 61BDB9972CF5E58D00249AC8 /* StudyTimeCheckWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -98,6 +193,9 @@
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					61BDB9802CF5D27B00249AC8 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					61BDB9962CF5E58D00249AC8 = {
 						CreatedOnToolsVersion = 15.2;
 					};
 				};
@@ -116,6 +214,7 @@
 			projectRoot = "";
 			targets = (
 				61BDB9802CF5D27B00249AC8 /* StudyTimeCheck */,
+				61BDB9962CF5E58D00249AC8 /* StudyTimeCheckWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +229,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		61BDB9952CF5E58D00249AC8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61BDB9A72CF5E59000249AC8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -137,12 +244,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61BDB9B22CF5E75700249AC8 /* LiveActivityManager.swift in Sources */,
 				61BDB9872CF5D27B00249AC8 /* ContentView.swift in Sources */,
+				61BDB9B02CF5E64A00249AC8 /* StudyTimeCheckWidgetLiveActivity.swift in Sources */,
 				61BDB9852CF5D27B00249AC8 /* StudyTimeCheckApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		61BDB9932CF5E58D00249AC8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61BDB9A12CF5E58D00249AC8 /* StudyTimeCheckWidgetLiveActivity.swift in Sources */,
+				61BDB99F2CF5E58D00249AC8 /* StudyTimeCheckWidgetBundle.swift in Sources */,
+				61BDB9B42CF6222B00249AC8 /* LiveActivityManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		61BDB9AA2CF5E59000249AC8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 61BDB9962CF5E58D00249AC8 /* StudyTimeCheckWidgetExtension */;
+			targetProxy = 61BDB9A92CF5E59000249AC8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		61BDB98D2CF5D28000249AC8 /* Debug */ = {
@@ -267,6 +394,7 @@
 		61BDB9902CF5D28000249AC8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -275,11 +403,14 @@
 				DEVELOPMENT_TEAM = 53TT286T39;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StudyTimeCheck/Info.plist;
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,6 +427,7 @@
 		61BDB9912CF5D28000249AC8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -304,11 +436,14 @@
 				DEVELOPMENT_TEAM = 53TT286T39;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StudyTimeCheck/Info.plist;
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,6 +451,60 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = net.macnpc.StudyTimeCheck;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		61BDB9AD2CF5E59000249AC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 53TT286T39;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StudyTimeCheckWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = StudyTimeCheckWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.macnpc.StudyTimeCheck.StudyTimeCheckWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		61BDB9AE2CF5E59000249AC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 53TT286T39;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StudyTimeCheckWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = StudyTimeCheckWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.macnpc.StudyTimeCheck.StudyTimeCheckWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -339,6 +528,15 @@
 			buildConfigurations = (
 				61BDB9902CF5D28000249AC8 /* Debug */,
 				61BDB9912CF5D28000249AC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		61BDB9AC2CF5E59000249AC8 /* Build configuration list for PBXNativeTarget "StudyTimeCheckWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61BDB9AD2CF5E59000249AC8 /* Debug */,
+				61BDB9AE2CF5E59000249AC8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

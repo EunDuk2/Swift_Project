@@ -10,12 +10,25 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Button(action: {
+                start()
+            }, label: {
+                Text("start")
+            })
+            Button(action: {
+                update()
+            }, label: {
+                Text("update")
+            })
         }
         .padding()
+    }
+    
+    func start() {
+        LiveActivityManager.shared.start(goal: "개발 공부", timer: 1800)
+    }
+    func update() {
+        LiveActivityManager.shared.update(state: StudyTimeCheckWidgetAttributes.ContentState(timer: 30))
     }
 }
 
