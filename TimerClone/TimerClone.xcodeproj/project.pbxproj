@@ -32,6 +32,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		61AA18ED2CFC4F30002B4A87 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		61AA18EE2CFC4F38002B4A87 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		61AA18EF2CFC4F3F002B4A87 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		61BDB9B52CFB315000249AC8 = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +72,9 @@
 		61BDB9C02CFB315000249AC8 /* TimerClone */ = {
 			isa = PBXGroup;
 			children = (
+				61AA18EF2CFC4F3F002B4A87 /* Model */,
+				61AA18EE2CFC4F38002B4A87 /* ViewModel */,
+				61AA18ED2CFC4F30002B4A87 /* View */,
 				61BDB9C12CFB315000249AC8 /* TimerCloneApp.swift */,
 				61BDB9C32CFB315000249AC8 /* ContentView.swift */,
 				61BDB9C52CFB315200249AC8 /* Assets.xcassets */,
