@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		61AA18F12CFC5F15002B4A87 /* WorldClockFirstTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA18F02CFC5F15002B4A87 /* WorldClockFirstTab.swift */; };
+		61AA18F32CFC6005002B4A87 /* AlarmSecondTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA18F22CFC6005002B4A87 /* AlarmSecondTab.swift */; };
+		61AA18F52CFC605D002B4A87 /* StopWatchThirdTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA18F42CFC605D002B4A87 /* StopWatchThirdTab.swift */; };
+		61AA18F82CFC60B0002B4A87 /* TimerFourthTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA18F72CFC60B0002B4A87 /* TimerFourthTab.swift */; };
 		61BDB9C22CFB315000249AC8 /* TimerCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BDB9C12CFB315000249AC8 /* TimerCloneApp.swift */; };
 		61BDB9C42CFB315000249AC8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BDB9C32CFB315000249AC8 /* ContentView.swift */; };
 		61BDB9C62CFB315200249AC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61BDB9C52CFB315200249AC8 /* Assets.xcassets */; };
@@ -14,6 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		61AA18F02CFC5F15002B4A87 /* WorldClockFirstTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldClockFirstTab.swift; sourceTree = "<group>"; };
+		61AA18F22CFC6005002B4A87 /* AlarmSecondTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSecondTab.swift; sourceTree = "<group>"; };
+		61AA18F42CFC605D002B4A87 /* StopWatchThirdTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchThirdTab.swift; sourceTree = "<group>"; };
+		61AA18F72CFC60B0002B4A87 /* TimerFourthTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerFourthTab.swift; sourceTree = "<group>"; };
 		61BDB9BE2CFB315000249AC8 /* TimerClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimerClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61BDB9C12CFB315000249AC8 /* TimerCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCloneApp.swift; sourceTree = "<group>"; };
 		61BDB9C32CFB315000249AC8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -35,6 +43,8 @@
 		61AA18ED2CFC4F30002B4A87 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				61AA18F62CFC608E002B4A87 /* Tabs */,
+				61BDB9C32CFB315000249AC8 /* ContentView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -51,6 +61,17 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		61AA18F62CFC608E002B4A87 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				61AA18F02CFC5F15002B4A87 /* WorldClockFirstTab.swift */,
+				61AA18F22CFC6005002B4A87 /* AlarmSecondTab.swift */,
+				61AA18F42CFC605D002B4A87 /* StopWatchThirdTab.swift */,
+				61AA18F72CFC60B0002B4A87 /* TimerFourthTab.swift */,
+			);
+			path = Tabs;
 			sourceTree = "<group>";
 		};
 		61BDB9B52CFB315000249AC8 = {
@@ -72,11 +93,10 @@
 		61BDB9C02CFB315000249AC8 /* TimerClone */ = {
 			isa = PBXGroup;
 			children = (
+				61BDB9C12CFB315000249AC8 /* TimerCloneApp.swift */,
 				61AA18EF2CFC4F3F002B4A87 /* Model */,
 				61AA18EE2CFC4F38002B4A87 /* ViewModel */,
 				61AA18ED2CFC4F30002B4A87 /* View */,
-				61BDB9C12CFB315000249AC8 /* TimerCloneApp.swift */,
-				61BDB9C32CFB315000249AC8 /* ContentView.swift */,
 				61BDB9C52CFB315200249AC8 /* Assets.xcassets */,
 				61BDB9C72CFB315200249AC8 /* Preview Content */,
 			);
@@ -162,7 +182,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				61BDB9C42CFB315000249AC8 /* ContentView.swift in Sources */,
+				61AA18F82CFC60B0002B4A87 /* TimerFourthTab.swift in Sources */,
+				61AA18F12CFC5F15002B4A87 /* WorldClockFirstTab.swift in Sources */,
 				61BDB9C22CFB315000249AC8 /* TimerCloneApp.swift in Sources */,
+				61AA18F32CFC6005002B4A87 /* AlarmSecondTab.swift in Sources */,
+				61AA18F52CFC605D002B4A87 /* StopWatchThirdTab.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
