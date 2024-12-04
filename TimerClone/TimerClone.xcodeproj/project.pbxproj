@@ -11,6 +11,7 @@
 		61AA18F32CFC6005002B4A87 /* AlarmSecondTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA18F22CFC6005002B4A87 /* AlarmSecondTab.swift */; };
 		61AA18F52CFC605D002B4A87 /* StopWatchThirdTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA18F42CFC605D002B4A87 /* StopWatchThirdTab.swift */; };
 		61AA18F82CFC60B0002B4A87 /* TimerFourthTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA18F72CFC60B0002B4A87 /* TimerFourthTab.swift */; };
+		61AA18FB2D004DFE002B4A87 /* TimerListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA18FA2D004DFE002B4A87 /* TimerListCell.swift */; };
 		61BDB9C22CFB315000249AC8 /* TimerCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BDB9C12CFB315000249AC8 /* TimerCloneApp.swift */; };
 		61BDB9C42CFB315000249AC8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BDB9C32CFB315000249AC8 /* ContentView.swift */; };
 		61BDB9C62CFB315200249AC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61BDB9C52CFB315200249AC8 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 		61AA18F22CFC6005002B4A87 /* AlarmSecondTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSecondTab.swift; sourceTree = "<group>"; };
 		61AA18F42CFC605D002B4A87 /* StopWatchThirdTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchThirdTab.swift; sourceTree = "<group>"; };
 		61AA18F72CFC60B0002B4A87 /* TimerFourthTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerFourthTab.swift; sourceTree = "<group>"; };
+		61AA18FA2D004DFE002B4A87 /* TimerListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerListCell.swift; sourceTree = "<group>"; };
 		61BDB9BE2CFB315000249AC8 /* TimerClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimerClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61BDB9C12CFB315000249AC8 /* TimerCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCloneApp.swift; sourceTree = "<group>"; };
 		61BDB9C32CFB315000249AC8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -43,7 +45,8 @@
 		61AA18ED2CFC4F30002B4A87 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				61AA18F62CFC608E002B4A87 /* Tabs */,
+				61AA18F62CFC608E002B4A87 /* Tab */,
+				61AA18F92D004DC6002B4A87 /* List Cell */,
 				61BDB9C32CFB315000249AC8 /* ContentView.swift */,
 			);
 			path = View;
@@ -63,7 +66,7 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		61AA18F62CFC608E002B4A87 /* Tabs */ = {
+		61AA18F62CFC608E002B4A87 /* Tab */ = {
 			isa = PBXGroup;
 			children = (
 				61AA18F02CFC5F15002B4A87 /* WorldClockFirstTab.swift */,
@@ -71,7 +74,15 @@
 				61AA18F42CFC605D002B4A87 /* StopWatchThirdTab.swift */,
 				61AA18F72CFC60B0002B4A87 /* TimerFourthTab.swift */,
 			);
-			path = Tabs;
+			path = Tab;
+			sourceTree = "<group>";
+		};
+		61AA18F92D004DC6002B4A87 /* List Cell */ = {
+			isa = PBXGroup;
+			children = (
+				61AA18FA2D004DFE002B4A87 /* TimerListCell.swift */,
+			);
+			path = "List Cell";
 			sourceTree = "<group>";
 		};
 		61BDB9B52CFB315000249AC8 = {
@@ -181,6 +192,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61AA18FB2D004DFE002B4A87 /* TimerListCell.swift in Sources */,
 				61BDB9C42CFB315000249AC8 /* ContentView.swift in Sources */,
 				61AA18F82CFC60B0002B4A87 /* TimerFourthTab.swift in Sources */,
 				61AA18F12CFC5F15002B4A87 /* WorldClockFirstTab.swift in Sources */,

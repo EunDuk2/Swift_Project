@@ -18,9 +18,15 @@ struct TimerFourthTab: View {
     
     var body: some View {
         NavigationView {
-            VStack {
-                Text("타이머")
+            List {
+                Section {
+                    Text("공백")
+                }
+                Section(header: Text("최근 항목").font(.title2).bold().foregroundStyle(.white)) {
+                    TimerListCell()
+                }
             }
+            .listStyle(.plain)
                 .navigationTitle(Text("타이머"))
                 .navigationBarItems(leading: Button(action: {
                     isEditing.toggle()
