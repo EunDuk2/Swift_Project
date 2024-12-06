@@ -9,60 +9,108 @@ import SwiftUI
 
 struct TimerListCell: View {
     
-    @State private var duration: Int = 1200      // 설정한 타이머 시간 (초 단위)
-    @State private var remainingTime: Int = 1200  // 남은 시간
-    @State private var isRunning: Bool = false  // 타이머 실행 여부
-    @State private var timer: Timer?            // 타이머 객체
-
+//    @State private var isOperating: Bool = false // 작동 여부
+//    @State private var duration: Int             // 설정한 타이머 시간 (초 단위)
+//    @State private var remainingTime: Int        // 남은 시간
+//    @State private var isRunning: Bool = false   // 타이머 실행 여부
+//    @State private var timer: Timer?             // 타이머 객체
+//
+//    init(duration: Int) {
+//        self.duration = duration
+//        self.remainingTime = duration
+//    }
+//    
+//    var body: some View {
+//        HStack {
+//            VStack(alignment: .leading) {
+//                // 남은 시간 표시
+//                Text("\(secondsToTimes(from: remainingTime))")
+//                    .font(.system(size: 60, weight: .thin))
+//                    .foregroundColor(isRunning ? .white : .gray)
+//                    
+//                Text("\(secondsToStringTimes(from: duration))")
+//                    .foregroundColor(isRunning ? .white : .gray)
+//                    
+//            }
+//            Spacer()
+//            Button(action: {
+//                if isRunning {
+//                    stopTimer()
+//                } else {
+//                    startTimer()
+//                }
+//            }, label: {
+//                isOperating ? Image(systemName: isRunning ? "pause.circle" : "play.circle")
+//                    .resizable()
+//                    .scaledToFit()
+//                    .frame(width: 65, height: 65)
+//                    .symbolRenderingMode(.multicolor)
+//                    .foregroundColor(.orange) :
+//                Image(systemName: "play.circle.fill")
+//                    .resizable()
+//                    .scaledToFit()
+//                    .frame(width: 65, height: 65)
+//                    .symbolRenderingMode(.hierarchical)
+//                    .foregroundColor(.green)
+//                
+//                
+//            })
+//            .frame(alignment: .trailing)
+//            .buttonStyle(BorderlessButtonStyle())
+//        }
+//    }
+    
+    @ObservedObject var timer: TimerModel
+    
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
                 // 남은 시간 표시
-                Text("\(secondsToTimes(from: remainingTime))")
+                Text("\(secondsToTimes(from: timer.getRemainingTime()))")
                     .font(.system(size: 60, weight: .thin))
-                    .foregroundColor(.gray)
-                    
-                Text("\(secondsToStringTimes(from: duration))")
-                    .foregroundColor(.gray)
-                    
+                    .foregroundColor(timer.getIsRunning() ? .white : .gray)
+
+                Text("\(secondsToStringTimes(from: timer.getDuration()))")
+                    .foregroundColor(timer.getIsRunning() ? .white : .gray)
+
             }
             Spacer()
             Button(action: {
-                if isRunning {
-                    stopTimer()
+                // 여기가 문제네..
+                // 타이머 타입에 따라 액션이 달라짐
+                // isOperating = true
+                // timer start, stop
+                // isOperating = false
+                // operatingTimer append
+                
+                if timer.getIsOperating() {
+                    if timer.getIsRunning() {
+                        timer.stopTimer()
+                    } else {
+                        timer.startTimer()
+                    }
                 } else {
-                    startTimer()
+                    
                 }
+                
             }, label: {
+                timer.getIsOperating() ? Image(systemName: timer.getIsRunning() ? "pause.circle" : "play.circle")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 65, height: 65)
+                    .symbolRenderingMode(.multicolor)
+                    .foregroundColor(.orange) :
                 Image(systemName: "play.circle.fill")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 65, height: 65)
                     .symbolRenderingMode(.hierarchical)
                     .foregroundColor(.green)
+
             })
             .frame(alignment: .trailing)
             .buttonStyle(BorderlessButtonStyle())
         }
-    }
-
-    // 타이머 시작
-    private func startTimer() {
-        isRunning = true
-        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
-            if remainingTime > 0 {
-                remainingTime -= 1
-            } else {
-                stopTimer()
-            }
-        }
-    }
-
-    // 타이머 멈춤
-    private func stopTimer() {
-        isRunning = false
-        timer?.invalidate()
-        timer = nil
     }
 
 

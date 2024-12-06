@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct TimerFourthTab: View {
+    // 뷰모델 선언
+    @ObservedObject var viewModel = TimerViewModel(operatingTimers: [TimerModel(isOperating: true, duration: 3532, remainingTime: 3532)], recentTimers: [TimerModel(isOperating: false, duration: 3532, remainingTime: 3532)])
+    
+//    @ObservedObject var tempTimer = TimerModel(duration: 3500, remainingTime: 3500)
     
     @Environment(\.editMode) private var editMode
     @State private var isEditing = false
@@ -19,12 +23,19 @@ struct TimerFourthTab: View {
     var body: some View {
         NavigationView {
             List {
+                // 실행 타이머
                 Section {
-                    Text("공백")
+                    ForEach(viewModel.operatingTimers) { timer in
+                        TimerListCell(timer: timer)
+                    }
                 }
+                // 최근 항목 타이머
                 Section(header: Text("최근 항목").font(.title2).bold().foregroundStyle(.white)) {
-                    TimerListCell()
+                    ForEach(viewModel.recentTimers) { timer in
+                        TimerListCell(timer: timer)
+                    }
                 }
+                
             }
             .listStyle(.plain)
                 .navigationTitle(Text("타이머"))
@@ -36,6 +47,8 @@ struct TimerFourthTab: View {
                     isEditing ? Text("완료").bold() : Text("편집")
                 }), trailing: Button(action: {
                     // + 버튼 액션
+                    viewModel.appendOperatingTimer(timer: TimerModel(isOperating: true, duration: 7321, remainingTime: 7321))
+                    viewModel.appendRecentTimer(timer: TimerModel(isOperating: false, duration: 7321, remainingTime: 7321))
                 }, label: {
                     Image(systemName: "plus")
                 }))
