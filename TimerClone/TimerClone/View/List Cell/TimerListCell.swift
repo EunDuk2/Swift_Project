@@ -8,59 +8,8 @@
 import SwiftUI
 
 struct TimerListCell: View {
-    
-//    @State private var isOperating: Bool = false // 작동 여부
-//    @State private var duration: Int             // 설정한 타이머 시간 (초 단위)
-//    @State private var remainingTime: Int        // 남은 시간
-//    @State private var isRunning: Bool = false   // 타이머 실행 여부
-//    @State private var timer: Timer?             // 타이머 객체
-//
-//    init(duration: Int) {
-//        self.duration = duration
-//        self.remainingTime = duration
-//    }
-//    
-//    var body: some View {
-//        HStack {
-//            VStack(alignment: .leading) {
-//                // 남은 시간 표시
-//                Text("\(secondsToTimes(from: remainingTime))")
-//                    .font(.system(size: 60, weight: .thin))
-//                    .foregroundColor(isRunning ? .white : .gray)
-//                    
-//                Text("\(secondsToStringTimes(from: duration))")
-//                    .foregroundColor(isRunning ? .white : .gray)
-//                    
-//            }
-//            Spacer()
-//            Button(action: {
-//                if isRunning {
-//                    stopTimer()
-//                } else {
-//                    startTimer()
-//                }
-//            }, label: {
-//                isOperating ? Image(systemName: isRunning ? "pause.circle" : "play.circle")
-//                    .resizable()
-//                    .scaledToFit()
-//                    .frame(width: 65, height: 65)
-//                    .symbolRenderingMode(.multicolor)
-//                    .foregroundColor(.orange) :
-//                Image(systemName: "play.circle.fill")
-//                    .resizable()
-//                    .scaledToFit()
-//                    .frame(width: 65, height: 65)
-//                    .symbolRenderingMode(.hierarchical)
-//                    .foregroundColor(.green)
-//                
-//                
-//            })
-//            .frame(alignment: .trailing)
-//            .buttonStyle(BorderlessButtonStyle())
-//        }
-//    }
-    
     @ObservedObject var timer: TimerModel
+    var timerViewModel: TimerViewModel?
     
     var body: some View {
         HStack {
@@ -76,7 +25,11 @@ struct TimerListCell: View {
             }
             Spacer()
             Button(action: {
-                // 여기가 문제네..
+                // 버튼 액션에 관해서..
+                // 아래 로직들은 여기에 있으면 안 됨
+                // 모델이나 뷰모델의 단순 buttonAction() 이런 함수만 발동해야함
+                
+                
                 // 타이머 타입에 따라 액션이 달라짐
                 // isOperating = true
                 // timer start, stop
@@ -90,7 +43,13 @@ struct TimerListCell: View {
                         timer.startTimer()
                     }
                 } else {
+                    // 누르면, 뷰모델의 appendOperatingTimer함수 발동
+                    // 인자로 현재 self 모델 전달
+                    // 그대로 저장해서 전달하면, 같은 참조로 동기화가 됨
+                    // 새로 만들어서 필요한 값만 맞춰줌
+                    let newTimer: TimerModel = TimerModel(isOperating: true, duration: self.timer.getDuration(), remainingTime: self.timer.getRemainingTime())
                     
+                    timerViewModel?.appendOperatingTimer(timer: newTimer)
                 }
                 
             }, label: {

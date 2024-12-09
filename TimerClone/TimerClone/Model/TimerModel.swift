@@ -41,8 +41,6 @@ class TimerModel: Identifiable, ObservableObject {
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
             if self.remainingTime > 0 {
                 self.remainingTime -= 1
-                print(self.remainingTime)
-                print(self.isRunning)
             } else {
                 self.stopTimer()
             }

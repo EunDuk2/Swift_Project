@@ -19,6 +19,7 @@ class TimerViewModel: ObservableObject {
     
     func appendOperatingTimer(timer: TimerModel) {
         self.operatingTimers.append(timer)
+        self.operatingTimers.last?.startTimer()
     }
     
     func appendRecentTimer(timer: TimerModel) {

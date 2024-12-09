@@ -11,8 +11,6 @@ struct TimerFourthTab: View {
     // 뷰모델 선언
     @ObservedObject var viewModel = TimerViewModel(operatingTimers: [TimerModel(isOperating: true, duration: 3532, remainingTime: 3532)], recentTimers: [TimerModel(isOperating: false, duration: 3532, remainingTime: 3532)])
     
-//    @ObservedObject var tempTimer = TimerModel(duration: 3500, remainingTime: 3500)
-    
     @Environment(\.editMode) private var editMode
     @State private var isEditing = false
     
@@ -32,7 +30,7 @@ struct TimerFourthTab: View {
                 // 최근 항목 타이머
                 Section(header: Text("최근 항목").font(.title2).bold().foregroundStyle(.white)) {
                     ForEach(viewModel.recentTimers) { timer in
-                        TimerListCell(timer: timer)
+                        TimerListCell(timer: timer, timerViewModel: self.viewModel)
                     }
                 }
                 
