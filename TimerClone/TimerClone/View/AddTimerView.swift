@@ -55,6 +55,25 @@ struct AddTimerView: View {
                     Text("초").bold()
                 }
                 
+                List {
+                    HStack {
+                        Text("레이블")
+                        Spacer()
+                        TextField(text: $text, label: {
+                            Text("타이머")
+                        })
+                        .multilineTextAlignment(.trailing)
+                        
+                    }
+                    NavigationLink(destination: Text("녹차")) {
+                        HStack {
+                            Text("타이머 종료 시")
+                            Spacer()
+                            Text("녹차").foregroundColor(.gray)
+                        }
+                    }
+                }
+                .listStyle(.insetGrouped)
                 
                 
                 
