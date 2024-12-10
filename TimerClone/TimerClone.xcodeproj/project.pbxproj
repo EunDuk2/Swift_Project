@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		615699D12D01C91400BE9B63 /* TimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615699D02D01C91400BE9B63 /* TimerModel.swift */; };
 		615699D32D02BB4300BE9B63 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615699D22D02BB4300BE9B63 /* TimerViewModel.swift */; };
+		615699D52D06CFED00BE9B63 /* AddTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615699D42D06CFED00BE9B63 /* AddTimerView.swift */; };
 		61AA18F12CFC5F15002B4A87 /* WorldClockFirstTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA18F02CFC5F15002B4A87 /* WorldClockFirstTab.swift */; };
 		61AA18F32CFC6005002B4A87 /* AlarmSecondTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA18F22CFC6005002B4A87 /* AlarmSecondTab.swift */; };
 		61AA18F52CFC605D002B4A87 /* StopWatchThirdTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA18F42CFC605D002B4A87 /* StopWatchThirdTab.swift */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		615699D02D01C91400BE9B63 /* TimerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerModel.swift; sourceTree = "<group>"; };
 		615699D22D02BB4300BE9B63 /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
+		615699D42D06CFED00BE9B63 /* AddTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTimerView.swift; sourceTree = "<group>"; };
 		61AA18F02CFC5F15002B4A87 /* WorldClockFirstTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldClockFirstTab.swift; sourceTree = "<group>"; };
 		61AA18F22CFC6005002B4A87 /* AlarmSecondTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSecondTab.swift; sourceTree = "<group>"; };
 		61AA18F42CFC605D002B4A87 /* StopWatchThirdTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchThirdTab.swift; sourceTree = "<group>"; };
@@ -52,6 +54,7 @@
 				61AA18F62CFC608E002B4A87 /* Tab */,
 				61AA18F92D004DC6002B4A87 /* List Cell */,
 				61BDB9C32CFB315000249AC8 /* ContentView.swift */,
+				615699D42D06CFED00BE9B63 /* AddTimerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				61BDB9C22CFB315000249AC8 /* TimerCloneApp.swift in Sources */,
 				61AA18F32CFC6005002B4A87 /* AlarmSecondTab.swift in Sources */,
 				61AA18F52CFC605D002B4A87 /* StopWatchThirdTab.swift in Sources */,
+				615699D52D06CFED00BE9B63 /* AddTimerView.swift in Sources */,
 				615699D12D01C91400BE9B63 /* TimerModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

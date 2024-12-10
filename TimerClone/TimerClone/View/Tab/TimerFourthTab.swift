@@ -13,6 +13,7 @@ struct TimerFourthTab: View {
     
     @Environment(\.editMode) private var editMode
     @State private var isEditing = false
+    @State private var isAddSheetPresent = true
     
     var imageSystemName: String
     var tabName: String
@@ -43,10 +44,19 @@ struct TimerFourthTab: View {
                     // 편집 버튼 액션
                 }, label: {
                     isEditing ? Text("완료").bold() : Text("편집")
-                }), trailing: Button(action: {
+                })
+                    .sheet(isPresented: $isAddSheetPresent) {
+                        
+                        AddTimerView(isPresent: $isAddSheetPresent)
+                        
+                        
+                    }, trailing: Button(action: {
                     // + 버튼 액션
-                    viewModel.appendOperatingTimer(timer: TimerModel(isOperating: true, duration: 7321, remainingTime: 7321))
-                    viewModel.appendRecentTimer(timer: TimerModel(isOperating: false, duration: 7321, remainingTime: 7321))
+                    
+                    self.isAddSheetPresent.toggle()
+                    
+//                    viewModel.appendOperatingTimer(timer: TimerModel(isOperating: true, duration: 7321, remainingTime: 7321))
+//                    viewModel.appendRecentTimer(timer: TimerModel(isOperating: false, duration: 7321, remainingTime: 7321))
                 }, label: {
                     Image(systemName: "plus")
                 }))
